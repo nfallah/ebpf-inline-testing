@@ -1,0 +1,10 @@
+
+sample4.o:	file format elf64-bpf
+
+Disassembly of section .text:
+
+0000000000000000 <my_func>:
+       0:	b7 00 00 00 01 00 00 00	r0 = 0x1
+       1:	95 00 00 00 00 00 00 00	exit
+       2:	b7 00 00 00 07 00 00 00	r0 = 0x7
+       3:	95 00 00 00 00 00 00 00	exit

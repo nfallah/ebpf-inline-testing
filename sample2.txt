@@ -1,0 +1,11 @@
+
+sample2.o:	file format elf64-bpf
+
+Disassembly of section .text:
+
+0000000000000000 <my_func>:
+       0:	b7 01 00 00 07 00 00 00	r1 = 0x7
+       1:	63 1a fc ff 00 00 00 00	*(u32 *)(r10 - 0x4) = r1
+       2:	05 00 ff ff 00 00 00 00	goto -0x1 <my_func+0x10>
+       3:	61 a0 fc ff 00 00 00 00	r0 = *(u32 *)(r10 - 0x4)
+       4:	95 00 00 00 00 00 00 00	exit

@@ -1,0 +1,5 @@
+for compiling userspace program:
+gcc prog.c -o prog ./libbpf/src/libbpf.a -lelf -lz
+
+for compiling sample:
+clang -target bpf -c sampleX.c -o sampleX.o

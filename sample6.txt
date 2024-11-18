@@ -1,0 +1,8 @@
+
+sample6.o:	file format elf64-bpf
+
+Disassembly of section socket:
+
+0000000000000000 <my_func>:
+       0:	b7 00 00 00 00 00 00 00	r0 = 0x0
+       1:	95 00 00 00 00 00 00 00	exit
