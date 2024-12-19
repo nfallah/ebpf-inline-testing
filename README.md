@@ -20,4 +20,4 @@ When I first conducted testing, I used a return signature of int for the functio
 
 Lastly, I wrote a small user-space program to attempt to (a) open and (b) load each object file. Every single sample was able to open, but libbpf internally ignores any program with the ".text" section (which is the default if no section is provided). sample1-sample5 were able to open, but there was no detection of the my_func program. sample6, however, is successfully opened, detected, and loaded, as it attaches to the "socket" section. sample7 is just like sample6, except that it uses a bogus section/attachment point, so it is not able to load.
 
-Ultimately, given the success of sample6, it is possible to start writing more complex programs in this granularity with the first step being a very small program that includes an unconditional jump. As discussed yesterday, I can also look into using the existing BPF macros and refactoring them to translate to these inline assembly instructions.
+Ultimately, given the success of sample6, this tool showcases the ability to write more granular eBPF programs that can be directly compiled to an object file with minimal efforts.
